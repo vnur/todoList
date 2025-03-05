@@ -6,6 +6,7 @@ import {
   getLocalStorageTodoData,
   setLocaStorageTodoData,
 } from "./TodoLocalStorage";
+import { TodoDateTime } from "./todoDateTime";
 
 export const Todo = () => {
   const [task, setTask] = useState(getLocalStorageTodoData);
@@ -26,9 +27,9 @@ export const Todo = () => {
   };
 
   //todoClearAll functionality
-  const handleClearAll = () =>{
-   return setTask([])
-  }
+  const handleClearAll = () => {
+    return setTask([]);
+  };
 
   // todo handleSubmit functionality
   const handleSubmitm = (inputvalue) => {
@@ -55,13 +56,15 @@ export const Todo = () => {
       <header className="header">TODO LIST</header>
 
       <section className="section-todo">
+        <TodoDateTime />
+
         <TodoForm submitbutton={handleSubmitm} />
 
         <TodoList
           data={task}
           deletetodo={handleDeleteTodo}
           checkedtodo={handleCheckTodo}
-          Clearall = {handleClearAll}
+          Clearall={handleClearAll}
         />
       </section>
     </>

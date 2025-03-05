@@ -91,3 +91,10 @@ li {
 .checkoff {
   text-decoration: none;
 }
+
+.todoDateTime{
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
